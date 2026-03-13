@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.tp3.TicketEditorController"
+      spacing="10" padding="15">
+    <Label text="Éditeur de ticket" styleClass="page-title"/>
+    <TextField fx:id="titleField" promptText="Titre"/>
+    <TextField fx:id="customerField" promptText="Client"/>
+    <ComboBox fx:id="priorityBox"/>
+    <DatePicker fx:id="datePicker"/>
+    <TextArea fx:id="descriptionArea" promptText="Description"/>
+    <CheckBox fx:id="urgentCheck" text="Urgent"/>
+    <ComboBox fx:id="statusBox"/>
+    <HBox spacing="10">
+        <Button text="Enregistrer" onAction="#handleSave"/>
+        <Button text="Réinitialiser" onAction="#handleReset"/>
+    </HBox>
+    <Label fx:id="statusLabel" text="Prêt." styleClass="status-label"/>
+</VBox>
